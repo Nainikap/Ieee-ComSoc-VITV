@@ -1,0 +1,285 @@
+.executive-board {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  padding-top: 100px;
+}
+
+.board-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.board-intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.team-photo-section {
+  width: 100%;
+  height: auto;
+  margin-bottom: 3rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 180, 255, 0.2);
+}
+
+.team-photo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.team-photo:hover {
+  transform: scale(1.05);
+}
+
+.board-title {
+  font-size: 3rem;
+  margin: 2rem 0;
+  background: linear-gradient(45deg, var(--text), var(--primary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.board-description {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding: 1rem;
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+}
+
+.board-members {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.faculty-row, .core-members-row, .domain-heads-row, .pr-projects-row {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.faculty-row {
+  grid-template-columns: repeat(2, 180px);
+}
+
+.core-members-row, .domain-heads-row {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 180px));
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.pr-projects-row {
+  grid-template-columns: repeat(2, 180px);
+}
+
+.member-card {
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease;
+  width: 180px;
+  position: relative;
+}
+
+.member-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 166, 255, 0.426); /* Translucent cyan background */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.member-card:hover::before {
+  opacity: 1;
+}
+
+.member-card img {
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.member-card:hover img {
+  transform: scale(1.05);
+}
+
+.member-info {
+  padding: 0.75rem;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.member-info h3 {
+  color: var(--text);
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.member-info p {
+  color: var(--primary);
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 15px; /* Increase gap for larger icons */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.member-card:hover .social-icons {
+  opacity: 1;
+  visibility: visible;
+}
+
+.social-icons a {
+  color: white; /* Make icons white */
+  font-size: 1.5rem; /* Increase icon size */
+  transition: color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+}
+
+.social-icons a:hover {
+  color: #000000; /* Change color on hover */
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+@media (max-width: 768px) {
+  .faculty-row, .pr-projects-row {
+    grid-template-columns: repeat(2, 160px);
+    justify-content: center;
+  }
+  
+  .core-members-row, .domain-heads-row {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 160px));
+  }
+
+  .member-card {
+    width: 160px;
+  }
+  
+  .board-title {
+    font-size: 2rem;
+  }
+  
+  .team-photo-section {
+    height: auto;
+  }
+
+  .member-info {
+    padding: 0.5rem;
+  }
+
+  .member-info h3 {
+    font-size: 0.85rem;
+  }
+
+  .member-info p {
+    font-size: 0.7rem;
+  }
+
+  .social-icons {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+} 
+
+.board-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.board-tab {
+  padding: 0.8rem 1.5rem;
+  background: rgba(18, 18, 18, 0.6);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.board-tab:hover {
+  background: rgba(0, 180, 255, 0.1);
+}
+
+.board-tab.active {
+  background: var(--primary);
+  color: var(--background);
+  border-color: var(--primary);
+}
+
+.board-content {
+  animation: fadeIn 0.5s ease;
+}
+
+.coming-soon-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(18, 18, 18, 0.6);
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.coming-soon-message h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.coming-soon-message p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .board-tabs {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  
+  .board-tab {
+    width: 100%;
+  }
+} 

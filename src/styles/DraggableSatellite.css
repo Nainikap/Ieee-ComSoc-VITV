@@ -1,0 +1,122 @@
+.satellite-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+}
+
+.satellite-hero canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .satellite-hero {
+    opacity: 0.7;
+  }
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(10, 10, 10, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--primary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.satellite-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+}
+
+.satellite-background canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.satellite-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: auto;
+}
+
+.satellite-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.satellite-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 150px;
+  height: 150px;
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.1s ease-out;
+}
+
+.satellite-widget canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .satellite-widget {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.satellite-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.satellite-wrapper {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  z-index: 1000;
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
