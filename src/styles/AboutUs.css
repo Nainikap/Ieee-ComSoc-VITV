@@ -89,7 +89,6 @@
   gap: 3rem;
   max-width: 1200px;
   margin: 4rem auto;
-  
 }
 
 .mission-section,
@@ -139,15 +138,25 @@
   transform: translateY(-5px);
 }
 
-.target-icon, .eye-icon {
-  width: 100px;
-  height: 100px;
+ .eye-icon {
+  width: 95px;
+  height: 95px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 2rem;
 }
+.target-icon{
+  width: 125px;
+  height: 125px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+}
+
 
 .target-icon img, .eye-icon img {
   width: 100%;

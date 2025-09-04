@@ -41,10 +41,11 @@ function AboutUs() {
                 </h2>
                 <p>
                   To bring the world together in harmony through communications and 
-                  networking technology research, application, education, and incubation of new ideas.
+                  networking technology research and incubation of new ideas everyday.
                   We envision fostering global collaboration that empowers individuals and communities, 
                   driving sustainable innovation. By nurturing talent and sharing
-                  knowledge, we aim to build a future of inclusive progress.
+                  knowledge, we aim to build a future of inclusive progress where technology serves as a
+                   bridge to opportunity and lasting positive impact to all.
                 </p>
               </div>
             </div>
