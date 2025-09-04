@@ -12,6 +12,8 @@
   min-height: calc(100vh - 80px); /* Adjust based on your navbar height */
 }
 
+
+
 /* Smooth page transitions */
 .page-transition-enter {
   opacity: 0;

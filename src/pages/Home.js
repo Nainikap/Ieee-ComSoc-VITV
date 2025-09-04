@@ -3,6 +3,7 @@ import '../styles/Home.css';
 import PageTransition from '../components/PageTransition';
 import { Canvas } from '@react-three/fiber';
 import { Satellite3D } from '../components/Satellite3D';
+import { Link } from "react-router-dom";
 
 function Home() {
   const sectionsRef = useRef([]);
@@ -18,7 +19,7 @@ function Home() {
     <PageTransition>
       <div className="home">
         <div className="hero-section" ref={el => sectionsRef.current[0] = el}>
-          <div className="title-container">
+          <div className="title-container" st>
             <h1 className="title">IEEE Communications Society</h1>
             <div className="satellite-canvas">
               <Canvas
@@ -54,7 +55,8 @@ function Home() {
             active members who are extremely talented and result oriented students. We have conducted 
             multiple events in and out of our college and have achieved remarkable success in all the events.
           </p>
-          <button className="know-more-btn">Know more</button>
+         <Link to="/about">
+          <button className="know-more-btn">Know more</button></Link>
         </div>
 
         <div className="about-vit-section" ref={el => sectionsRef.current[2] = el}>
@@ -63,7 +65,7 @@ function Home() {
               ABOUT VIT
             </h2>
             <div className="vit-image">
-              <img src="/TT_photo/TT_FINAL_PHOTO_27-12-2007.jpg" alt="VIT Campus" />
+              <img src="/TT_photo/TT_FINAL_PHOTO_27-12-2007.webp" alt="VIT Campus" />
             </div>
             <div className="vit-description">
               <p>
@@ -72,6 +74,9 @@ function Home() {
               <p>
                 The University is headed by its founder and Chancellor, Dr. G. Viswanathan, a former Parliamentarian and Minister in the Tamil Nadu Government. In recognition of his service to India in offering world class education, he was conferred an honorary doctorate by the West Virginia University, USA.
               </p>
+              <button className="know-more-btn" 
+              onClick={ () => window.open("https://vit.ac.in", "blank")}>
+              Know more</button>
             </div>
           </div>
         </div>

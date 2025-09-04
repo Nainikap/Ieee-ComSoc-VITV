@@ -52,6 +52,11 @@ const Footer = () => {
                   <i className="fab fa-medium-m"></i>
                 </div>
               </a>
+              <a href="https://www.youtube.com/@vitieeecomsoc" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+                <div className="social-icon-footer">
+                  <i className="fab fa-youtube"></i>
+                </div>
+              </a>
             </div>
           </div>
         </div>

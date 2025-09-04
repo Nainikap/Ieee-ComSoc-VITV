@@ -7,7 +7,7 @@ function AboutUs() {
       <div className="about-us">
         {/* About Us Title */}
         <div className="about-us-title">
-          <h1>About Us</h1>
+          <h1>ABOUT US</h1>
         </div>
 
         {/* Mission and Vision Sections */}
@@ -22,7 +22,7 @@ function AboutUs() {
                   OUR MISSION
                 </h2>
                 <p>
-                  The IEEE Communications Society at VIT promotes technological innovation and fosters creation and sharing of information among 
+                  The IEEE ComSoc at VIT promotes technological innovation and fosters creation and sharing of information among 
                   the global technical community. The Society provides services to members for their technical and professional advancement 
                   and forums for technical exchanges among professionals in academia, industry, and public institutions.
                 </p>
@@ -42,6 +42,9 @@ function AboutUs() {
                 <p>
                   To bring the world together in harmony through communications and 
                   networking technology research, application, education, and incubation of new ideas.
+                  We envision fostering global collaboration that empowers individuals and communities, 
+                  driving sustainable innovation. By nurturing talent and sharing
+                  knowledge, we aim to build a future of inclusive progress.
                 </p>
               </div>
             </div>
