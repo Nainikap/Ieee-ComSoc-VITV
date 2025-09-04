@@ -65,7 +65,7 @@ function Home() {
               ABOUT VIT
             </h2>
             <div className="vit-image">
-              <img src="/TT_photo/TT_FINAL_PHOTO_27-12-2007.webp" alt="VIT Campus" />
+              <img src="/TT_photo/TT_FINAL_PHOTO_27-12-2007.jpg" alt="VIT Campus" />
             </div>
             <div className="vit-description">
               <p>
