@@ -3,12 +3,12 @@ import '../styles/ExecutiveBoard.css';
 import PageTransition from '../components/PageTransition';
 
 function ExecutiveBoard() {
-  const [activeBoard, setActiveBoard] = useState('2324'); // '2324' or '2425'
+  const [activeBoard, setActiveBoard] = useState('2526'); // '2324' or '2425'
 
   return (
     <PageTransition>
       <div className="executive-board"><h1 className="board-title">
-                  EXECUTIVE BOARD OF DIRECTORS 23-24
+                  EXECUTIVE BOARD OF DIRECTORS 24-25
                 </h1>
                 <p className="board-description">
                   As board members, we work meticulously with unwavering passion, work ethic and dedicatedly 
@@ -19,22 +19,22 @@ function ExecutiveBoard() {
           {/* Board selection tabs */}
           <div className="board-tabs">
             <button 
+              className={`board-tab ${activeBoard === '2526' ? 'active' : ''}`}
+              onClick={() => setActiveBoard('2526')}
+            >
+              25-26 Board
+            </button>
+            <button 
               className={`board-tab ${activeBoard === '2425' ? 'active' : ''}`}
               onClick={() => setActiveBoard('2425')}
             >
-              2024-25 Board
-            </button>
-            <button 
-              className={`board-tab ${activeBoard === '2324' ? 'active' : ''}`}
-              onClick={() => setActiveBoard('2324')}
-            >
-              2023-24 Board
+              2024-25
             </button>
             
           </div>
 
           {/* 2023-24 Board */}
-          {activeBoard === '2324' && (
+          {activeBoard === '2425' && (
             <div className="board-content">
               {/* Existing board intro and content */}
               <div className="board-intro">
@@ -47,7 +47,7 @@ function ExecutiveBoard() {
                 </div>
 
                 <h1 className="board-title">
-                  EXECUTIVE BOARD OF DIRECTORS 23-24
+                  EXECUTIVE BOARD OF DIRECTORS 24-25
                 </h1>
 
                 <p className="board-description">
@@ -68,13 +68,7 @@ function ExecutiveBoard() {
                         <p>Faculty Coordinator</p>
                       </div>
                     </div>
-                    <div className="member-card">
-                      <img src="/photos/Dr._Renuga_Devi_S-(Faculty_Coordinator).jpg" alt="Faculty Coordinator" />
-                      <div className="member-info">
-                        <h3>Dr. Renuga Devi S</h3>
-                        <p>Faculty Coordinator</p>
-                      </div>
-                    </div>
+                   
                   </div>
                 </div>
 
@@ -248,7 +242,7 @@ function ExecutiveBoard() {
           )}
 
           {/* 2024-25 Board */}
-          {activeBoard === '2425' && (
+          {activeBoard === '2526' && (
             <div className="board-content">
               <div className="board-intro">
                 <div className="team-photo-section">
@@ -260,11 +254,11 @@ function ExecutiveBoard() {
                 </div>
 
                 <h1 className="board-title">
-                  EXECUTIVE BOARD OF DIRECTORS 24-25
+                  EXECUTIVE BOARD OF DIRECTORS 25-26
                 </h1>
 
                 <p className="board-description">
-                  Meet our new board members for the year 2024-25, committed to taking 
+                  Meet our new board members for the year 2025-26, committed to taking 
                   IEEE Communications Society VIT Chapter to greater heights.
                 </p>
               </div>
@@ -278,13 +272,6 @@ function ExecutiveBoard() {
                       <img src="/photos/DR._Thanikaiselvan_V-(Faculty_Coordinator).jpg" alt="Faculty Coordinator" />
                       <div className="member-info">
                         <h3>Dr. Thanikaiselvan V</h3>
-                        <p>Faculty Coordinator</p>
-                      </div>
-                    </div>
-                    <div className="member-card">
-                      <img src="/photos/Dr._Renuga_Devi_S-(Faculty_Coordinator).jpg" alt="Faculty Coordinator" />
-                      <div className="member-info">
-                        <h3>Dr. Renuga Devi S</h3>
                         <p>Faculty Coordinator</p>
                       </div>
                     </div>

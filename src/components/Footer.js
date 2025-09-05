@@ -20,7 +20,7 @@ const Footer = () => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/events">Events</Link></li>
-              <li><Link to="/team">Team</Link></li>
+              <li><Link to="/executive-board">Executive Board</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                   <i className="fab fa-instagram"></i>
                 </div>
               </a>
-              <a href="mailto:info@ieeecomsoc.org" target="_blank" rel="noopener noreferrer" aria-label="Email">
+              <a href="ieeecomsoc@vit.ac.in" target="_blank" rel="noopener noreferrer" aria-label="Email">
                 <div className="social-icon-footer">
                   <i className="fas fa-envelope"></i>
                 </div>

@@ -80,7 +80,7 @@
   top: 0;
   color: white;
   font-size: 2rem;
-  background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0));
+  background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.2));
   /* z-index: 3; */
   box-sizing: border-box;
   text-align: left;
